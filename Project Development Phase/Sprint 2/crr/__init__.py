@@ -10,14 +10,14 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = '587480e285a7584cd755f6d6247ceb77'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'ibm_db_sa://pnh87629:XgilJxEPyFW9XgAk@824dfd4d-99de-440d-9991-629c01b3832d.bs2io90l08kqb1od8lcg.databases.appdomain.cloud:30119/BLUDB;security=SSL;'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'ibm_db_sa://::/BLUDB;security=SSL;'
 
 app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'apikey'
-app.config['MAIL_PASSWORD'] = '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'
-app.config['MAIL_DEFAULT_SENDER'] = 'ilamvazhuthi.j@gmail.com'
+app.config['MAIL_PASSWORD'] = ''
+app.config['MAIL_DEFAULT_SENDER'] = ''
 
 mail = Mail(app)
 
