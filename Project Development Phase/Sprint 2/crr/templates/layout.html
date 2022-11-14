@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+{%block head%}
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>14584 CCR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--Navigation Bar-->
+    <section id="navigation-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="/static/images/logo.jpeg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{url_for('account')}}">Account</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{url_for('new_ticket')}}">New Ticket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('index')}}">About us</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{url_for('register')}}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    {%endblock%}
+
+    {% with messages = get_flashed_messages(with_categories = True) %}
+        {% if messages%}
+            {%for category, message in messages%}
+                <div class="alert alert-{{category}}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {%endif%}
+    {% endwith%}
+
+</head>
+
+<body>
+    {%block body%}{%endblock%}
+    {%block footer%}
+    <!--apps-->
+    <section id="specialities">
+        <div class="container">
+            <h3>Our Specialities</h3>
+            <div class="row specialities">
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <i class="fa fa-microphone"></i>
+                    </div>
+                    <h4 style="color:white">24/7 Customer Care</h4>
+                    <p>Have an issue? Don't worry. You can call or mail us or you leave a message 24/7!</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <i class="fa fa-bluetooth-b"></i>
+                    </div>
+                    <h4 style="color:white">Highly Trained Staff</h4>
+                    <p>All the personel have been trainded to help you with your needs.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <h4 style="color:white">No better Community</h4>
+                    <p>If you have a query you can go to our forums and communicate with people who have faced similar issues.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="icon">
+                        <i class="fa fa-user-o"></i>
+                    </div>
+                    <h4 style="color:white">Most important asset</h4>
+                    <p>As our beloved and Happy customer you are our most import asset.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our app</h3>
+                    <p>Download App for Android and IOS.</p>
+                    <div class="app-logo">
+                        <img src="/static/images/play-store.png">
+                        <img src="/static/images/ios-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="/static/images/logo.jpeg">
+                    <p>We aim at making it easier for you to work with us.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Joint Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Ilamvazhuthi Jayaraman</p>
+        </div>
+    </div>
+    
+<script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "70bccedd-08a4-4d1d-9c5a-69b3e2d210f3", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "b47134eb-7b1f-4d23-a9f8-d0e6b0f0d457", // The ID of your service instance.
+      onLoad: function (instance) {
+        instance.render();
+      },
+    };
+    setTimeout(function () {
+      const t = document.createElement("script");
+      t.src =
+        "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+        (window.watsonAssistantChatOptions.clientVersion || "latest") +
+        "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+    {%endblock footer%}
+</body>
+
+</html>
