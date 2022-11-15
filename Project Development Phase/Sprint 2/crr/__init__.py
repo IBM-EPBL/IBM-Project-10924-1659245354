@@ -10,7 +10,7 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = '587480e285a7584cd755f6d6247ceb77'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'ibm_db_sa://::/BLUDB;security=SSL;'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'ibm_db_sa://pnh87629:XgilJxEPyFW9XgAk@824dfd4d-99de-440d-9991-629c01b3832d.bs2io90l08kqb1od8lcg.databases.appdomain.cloud:30119/BLUDB;security=SSL;'
 
 app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
 app.config['MAIL_PORT'] = 587
