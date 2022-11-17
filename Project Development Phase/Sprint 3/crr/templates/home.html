@@ -1,0 +1,15 @@
+{%extends 'layout.html' %}
+{%block body%}
+{% for ticket in tickets %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="{{url_for('ticket', ticket_id=ticket.id) }}">{{ ticket.author.username }}</a>
+                <small class="text-muted">{{ ticket.date_posted.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <h2><a class="article-title" href="{{url_for('ticket', ticket_id=ticket.id) }}">{{ ticket.title }}</a></h2>
+            <p class="article-content">{{ ticket.content }} - {{ticket.status}}</p>
+        </div>
+    </article>
+{% endfor %}
+{%endblock%}
