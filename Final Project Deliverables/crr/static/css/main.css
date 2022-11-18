@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*for complete website*/
+}
+
+
+/*Navigation Bar*/
+
+#navigation-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-brand img {
+    height: 40px;
+    padding-left: 30px;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    float: right;
+    text-align: left;
+}
+
+.navbar-nav li a:hover {
+    color: #007bff!important;
+}
+
+.navbar {
+    background: #fff;
+}
+
+.navbar-toggler {
+    border: none!important;
+}
+
+.nav-link {
+    color: #555!important;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+/*slider*/
+
+#slider {
+  width: 100%;
+  
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial!important;
+}
+
+.carousel-caption h5 {
+  color: #fff;
+  font-size: 90px;
+}
+
+/*About*/
+
+#about-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #555;
+}
+
+.about {
+    padding-top: 20px;
+}
+
+.progress p {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    border-radius: 16px;
+}
+
+.progress {
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+#specialities h3 {
+    padding-top: 20px;
+    text-align: center;
+    color: #efefef!important;
+    padding-bottom: 5px;
+}
+
+#specialities h3::after {
+    content: '';
+    background: white;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+}
+
+.specialities {
+    margin-top: 40px;
+}
+
+.icon {
+    font-size: 40px;
+    color: white;
+    margin: 20px auto;
+    padding: 20px;
+    height: 100px;
+    width: 80px;
+    border: 1px solid white;
+    border-radius: 25%;
+}
+
+#specialities p {
+    font-size: 14px;
+    margin-top: 20px;
+    color: white;
+}
+
+#specialities {
+    background-image: url("/static/images/HMS1.jpg");
+}
+
+
+/*footer*/
+
+.footer {
+    background: #000;
+    color: #8a8a8a;
+    font-size: 10x;
+    padding: 60px 0 20px;
+}
+
+.footer p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col-1,
+footer-col-2,
+footer-col-3,
+footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1 {
+    flex-basis: 30%;
+}
+
+.footer-col-2 {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-2 img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-col-3,
+.footer-col-4 {
+    flex-basis: 10%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 120px;
+}
+
+.footer hr {
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+input[type="text"]:disabled {
+    background: #ffffff;
+  }
+  input[type="email"]:disabled {
+    background: #ffffff;
+  }
+  input[type="number"]:disabled {
+    background: #ffffff;
+  }
+  textarea[class="form-control"]:disabled {
+    background: #ffffff;
+  }
+
+  body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  .bg-steel {
+    background-color: #5f788a;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  
+  .article-title {
+    color: #444444;
+  }
+  
+  a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
